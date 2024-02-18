@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Horario CFGM SMX2A</title>
+<style>
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #4682b4;
+  margin: 0;
+  padding: 0;
+}
+
+.table-width {
+  width: 80%;
+  margin: auto;
+}
+
+h1, h2 {
+  color: #fffffd;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #f1f2ef;
+  text-align: center;
+}
+
+.horari,
+.professorat {
+  width: 50%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+th,
+td {
+  border: 1px solid #000000;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #dddddd;
+  width: 10em;
+  color: #333;
+}
+
+th:first-child {
+  background-color: #c0c0c0;
+  color: #04050e;
+}
+
+.professorat th:last-child {
+  background-color: #dddddd;
+}
+
+.professorat tr:nth-child(even) {
+  background-color: #b0c4de;
+}
+
+.horari tr {
+  background-color: white;
+}
+
+.professorat tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.table-narrow {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+
+.link-estudiantes {
+    display: inline-block;
+    background-color: #f4f4f4;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #4682b4;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+  }
+
+  .link-estudiantes h1 {
+    margin: 0;
+    color: #000000;
+  }
+
+  .link-estudiantes:hover {
+    background-color: #e5e5e5;
+    text-decoration: none;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+  }
+
+
+</style>
+</head>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var colorMapping = {
+      'MP06': '#dde8cb',
+      'MP07': '#ffffd7',
+      'MP12': '#f7d1d5',
+      'MP14': '#fff5ce',
+      'MP04': '#ffdbb6',
+      'MP10': '#b4c7dc',
+      'MP08': '#dee6ef',
+      'T': '#eeeeee',
+    };
+    
+    document.querySelectorAll('td').forEach(function(td) {
+      var text = td.textContent.trim();
+      if (colorMapping[text]) {
+        td.style.backgroundColor = colorMapping[text];
+      }
+    });
+  });
+</script>
+
+<body>
+
+
+  <a href="llista.html" class="link-estudiantes">
+    <h1>👉Lista de estudiantes👈</h1>
+  </a>
+
+  <div class="table-width">
+    <h1>CFGM Sist. Microinf. I Xarxes</h1>
+    <p>Curs: 2n Grup: A</p>
+    <p>Tutor: José Camuñez</p>
+    <p>Aula Ada</p>
+    <h2>CURS 2023-2024</h2>
+<table class="horari">
+  <tr>
+    <th>HORA</th>
+    <th>Dilluns</th>
+    <th>Dimarts</th>
+    <th>Dimecres</th>
+    <th>Dijous</th>
+    <th>Divendres</th>
+  </tr>
+  <tr>
+    <td>8:10–9:10</td>
+    <td>MP14</td>
+    <td rowspan="2">MP07</td>
+    <td rowspan="2">MP04</td>
+    <td>MP07</td>
+    <td rowspan="2">MP07</td>
+  </tr>
+  <tr>
+    <td>9:10–10:10</td>
+    <td rowspan="2">MP06</td>    
+    <td rowspan="2">MP04</td>
+  </tr>
+  <tr>
+    <td>10:10–11:10</td>
+    <td>MP12</td>
+    <td>MP06</td>
+    <td>MP10</td>
+  </tr>
+  <tr>
+    <td class="table-narrow">11:10-11:40</td>
+    <td class="table-narrow" colspan="5">Pati</td>
+  </tr>
+  <tr>
+    <td>11:40–12:40</td>
+    <td rowspan="2">MP12</td>
+    <td rowspan="3">MP08</td>
+    <td rowspan="2">MP12</td>
+    <td>MP12</td>
+    <td rowspan="2">MP12</td>
+  </tr>
+  <tr>
+    <td>12:40–13:40</td>
+    <td>MP10</td>
+  </tr>
+  <tr>
+    <td>13:40–14:40</td>
+    <td>T</td>
+    <td> </td>
+    <td>MP12</td>
+    <td>MP14</td>
+  </tr>
+</table>
+<table class="professorat" id="nima" style="margin-bottom: 30px;">
+  <tr>
+    <th>Mòduls professionals</th>
+    <th>Professorat</th>
+  </tr>
+  <tr>
+    <td>MP04 Sistemes operatius en xarxa</td>
+    <td>José Camúñez</td>
+  </tr>
+  <tr>
+    <td>MP06 Seguretat informàtica</td>
+    <td>Jordi Farrero</td>  
+  </tr>
+  <tr>
+    <td>MP07 Serveis de xarxa</td>
+    <td>Víctor Carceler</td>
+  </tr>
+  <tr>
+    <td>MP08 Aplicacions web</td>
+    <td>David Rodríguez (El Mejor)</td>
+  </tr>
+  <tr>
+    <td>MP10 Empresa i iniciativa emprenedora</td>
+    <td>Sònia Martínez</td>
+  </tr>
+  <tr>
+    <td>MP12 Crèdit de síntesi</td>
+    <td>Jordi Farrero, Federico Jerez, Sònia Martínez</td>
+  </tr>
+  <tr>
+    <td>MP14 Anglès tècnic</td>
+    <td>Natàlia López</td>
+  </tr>
+</table>
+</body>
+</html>
